@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SaeedPopularMovies</string>
+
+    <string name="action_sort_top_rated">Sort: Top Rated</string>
+    <string name="action_sort_popular">Sort: Popularity</string>
+    <string name="movie_thumbnail">Movie Thumbnail</string>
+    <string name="movie_overview_label">Movie Overview</string>
+    <string name="title_activity_movie_details">Movie Details</string>
+    <string name="content_authority">com.example.saeed.saeedpopularmovies</string>
+    <string name="response_error">Unable to fetch data</string>
+    <string name="response_failure">Couldn\'t Fetch Content</string>
+    <string name="error_connectivity_title">No Connectivity</string>
+    <string name="error_connectivity_message">Please connect to internet.</string>
+    <string name="movie_reviews_label">Reviews</string>
+    <string name="error_reviews">No Reviews Available</string>
+
+</resources>
