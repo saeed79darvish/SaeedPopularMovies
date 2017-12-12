@@ -10,76 +10,75 @@ import java.io.Serializable;
 @Parcel
 public class Movie implements Serializable {
     @SerializedName("poster_path")
-    public String poster_path;
+    public String posterPath;
     @SerializedName("overview")
-    public String overview;
+    public String overView;
     @SerializedName("release_date")
-    public String release_date;
+    public String releaseDate;
     @SerializedName("id")
-    public String id;
+    public String mId;
     @SerializedName("title")
-    public String title;
+    public String mTitle;
     @SerializedName("vote_average")
-    public String vote_average;
+    public String voteAverage;
 
-
-    public String getPoster_path() {
-        return poster_path;
+    public String getPosterPath() {
+        return posterPath;
     }
 
-    public void setPoster_path(String poster_path) {
-        this.poster_path = poster_path;
+    public void setPosterPath(String posterPath) {
+        this.posterPath = posterPath;
     }
 
-    public String getOverview() {
-        return overview;
+    public String getOverView() {
+        return overView;
     }
 
-    public void setOverview(String overview) {
-        this.overview = overview;
+    public void setOverView(String overView) {
+        this.overView = overView;
     }
 
-    public String getRelease_date() {
-        return "Release Date : " + release_date;
+    public String getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setRelease_date(String release_date) {
-        this.release_date = release_date;
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
-    public String getId() {
-        return id;
+    public String getmId() {
+        return mId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setmId(String mId) {
+        this.mId = mId;
     }
 
-    public String getTitle() {
-        return title;
+    public String getmTitle() {
+        return mTitle;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setmTitle(String mTitle) {
+        this.mTitle = mTitle;
     }
 
-    public String getVote_average() {
-        return "Rating : " + vote_average + "/10";
+    public String getVoteAverage() {
+        return voteAverage;
     }
 
-    public void setVote_average(String vote_average) {
-        this.vote_average = vote_average;
+    public void setVoteAverage(String voteAverage) {
+        this.voteAverage = voteAverage;
     }
 
     @Override
     public String toString() {
         return "Movie{" +
-                "poster_path='" + poster_path + '\'' +
-                ", overview='" + overview + '\'' +
-                ", release_date='" + release_date + '\'' +
-                ", id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", vote_average='" + vote_average + '\'' +
+                "posterPath='" + posterPath + '\'' +
+                ", overView='" + overView + '\'' +
+                ", releaseDate='" + releaseDate + '\'' +
+                ", mId='" + mId + '\'' +
+                ", mTitle='" + mTitle + '\'' +
+                ", voteAverage='" + voteAverage + '\'' +
                 '}';
     }
 }

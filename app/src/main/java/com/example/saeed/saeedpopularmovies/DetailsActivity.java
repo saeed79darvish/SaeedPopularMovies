@@ -53,7 +53,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         if (getIntent().getExtras() != null) {
             movieData = Parcels.unwrap(getIntent().getParcelableExtra(EXTRA_OBJECT));
-            movieId = movieData.getId();
+            movieId = movieData.getmId();
         }
         updateUi(movieData);
         if (savedInstanceState != null) {
@@ -75,13 +75,6 @@ public class DetailsActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putParcelable(REVIEWS_STATE_KEY, Parcels.wrap(reviewList));
-    }
-
-
     private void fetchReviews(String movieId) {
         detailsBinding.pbReviewsLoading.setVisibility(View.VISIBLE);
         Retrofit retrofit = new Retrofit.Builder()
@@ -100,9 +93,9 @@ public class DetailsActivity extends AppCompatActivity {
                     detailsBinding.tvReviewsError.setVisibility(View.VISIBLE);
                     return;
                 }
-                if (response.body().getResults().size() != 0) {
+                if (response.body().getmResults().size() != 0) {
                     reviewsRecyclerView.setVisibility(View.VISIBLE);
-                    reviewList = response.body().getResults();
+                    reviewList = response.body().getmResults();
                     movieReviewAdapter.setReviewList(reviewList);
                 } else
                     detailsBinding.tvReviewsError.setVisibility(View.VISIBLE);
@@ -119,12 +112,12 @@ public class DetailsActivity extends AppCompatActivity {
 
 
     private void updateUi(Movie movieInfo) {
-        detailsBinding.tvMovieTitle.setText(movieInfo.getTitle());
-        detailsBinding.tvMovieRating.setText(movieInfo.getVote_average());
-        detailsBinding.tvMovieOverview.setText(movieInfo.getOverview());
-        detailsBinding.tvMovieReleaseDate.setText(movieInfo.getRelease_date());
+        detailsBinding.tvMovieTitle.setText(movieInfo.getmTitle());
+        detailsBinding.tvMovieRating.setText(movieInfo.getVoteAverage());
+        detailsBinding.tvMovieOverview.setText(movieInfo.getOverView());
+        detailsBinding.tvMovieReleaseDate.setText(movieInfo.getReleaseDate());
         Picasso.with(this)
-                .load(APIService.IMAGE_URL + movieInfo.getPoster_path())
+                .load(APIService.IMAGE_URL + movieInfo.getPosterPath())
                 .into(detailsBinding.imvMovieThumbnail);
 
     }

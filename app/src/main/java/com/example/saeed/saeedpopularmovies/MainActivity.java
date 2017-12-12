@@ -61,8 +61,6 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Item
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) ? 2 : 4));
         mMoviesAdapter = new MovieAdapter(MainActivity.this);
         mRecyclerView.setAdapter(mMoviesAdapter);
-
-
         sortType = getSharedPreferences(SHARED_PREFERENCE_KEY, 0).getString(SORT_KEY, POPULAR);
 
         if (savedInstanceState != null) {
@@ -83,17 +81,6 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Item
                             }
                         }).show();
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putParcelable(MOVIES_STATE_KEY, Parcels.wrap(mMovieList));
     }
 
 

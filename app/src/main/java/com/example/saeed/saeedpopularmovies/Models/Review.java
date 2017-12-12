@@ -8,63 +8,63 @@ import org.parceler.Parcel;
 @Parcel
 public class Review {
     @SerializedName("id")
-    public String id;
+    public String mId;
     @SerializedName("author")
-    public String author;
+    public String mAuthor;
     @SerializedName("content")
-    public String content;
+    public String mContent;
     @SerializedName("url")
-    public String url;
+    public String mUrl;
 
     public Review() {
     }
 
-    public Review(String id, String author, String content, String url) {
-        this.id = id;
-        this.author = author;
-        this.content = content;
-        this.url = url;
+    public Review(String mId, String mAuthor, String mContent, String mUrl) {
+        this.mId = mId;
+        this.mAuthor = mAuthor;
+        this.mContent = mContent;
+        this.mUrl = mUrl;
     }
 
-    public String getId() {
-        return id;
+    public String getmId() {
+        return mId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setmId(String mId) {
+        this.mId = mId;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getmAuthor() {
+        return mAuthor;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setmAuthor(String mAuthor) {
+        this.mAuthor = mAuthor;
     }
 
-    public String getContent() {
-        return content;
+    public String getmContent() {
+        return mContent;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setmContent(String mContent) {
+        this.mContent = mContent;
     }
 
-    public String getUrl() {
-        return url;
+    public String getmUrl() {
+        return mUrl;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setmUrl(String mUrl) {
+        this.mUrl = mUrl;
     }
 
     @Override
     public String toString() {
         return "Review{" +
-                "id='" + id + '\'' +
-                ", author='" + author + '\'' +
-                ", content='" + content + '\'' +
-                ", url='" + url + '\'' +
+                "mId='" + mId + '\'' +
+                ", mAuthor='" + mAuthor + '\'' +
+                ", mContent='" + mContent + '\'' +
+                ", mUrl='" + mUrl + '\'' +
                 '}';
     }
 }

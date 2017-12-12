@@ -37,7 +37,7 @@ public class MovieReviewAdapter extends RecyclerView.Adapter<MovieReviewAdapter.
 
     @Override
     public void onBindViewHolder(ReviewViewHolder holder, int position) {
-        holder.bind(reviewList.get(position).getAuthor(), reviewList.get(position).getContent());
+        holder.bind(reviewList.get(position).getmAuthor(), reviewList.get(position).getmContent());
     }
 
     @Override

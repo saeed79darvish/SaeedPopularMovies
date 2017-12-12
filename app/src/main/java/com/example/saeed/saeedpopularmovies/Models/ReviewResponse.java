@@ -9,13 +9,13 @@ import java.util.List;
 public class ReviewResponse {
     @SerializedName("id")
     @Expose
-    private Integer id;
+    private Integer mId;
     @SerializedName("page")
     @Expose
-    private Integer page;
+    private Integer mPage;
     @SerializedName("results")
     @Expose
-    private List<Review> results = null;
+    private List<Review> mResults = null;
     @SerializedName("total_pages")
     @Expose
     private Integer totalPages;
@@ -23,28 +23,28 @@ public class ReviewResponse {
     @Expose
     private Integer totalResults;
 
-    public Integer getId() {
-        return id;
+    public Integer getmId() {
+        return mId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setmId(Integer mId) {
+        this.mId = mId;
     }
 
-    public Integer getPage() {
-        return page;
+    public Integer getmPage() {
+        return mPage;
     }
 
-    public void setPage(Integer page) {
-        this.page = page;
+    public void setmPage(Integer mPage) {
+        this.mPage = mPage;
     }
 
-    public List<Review> getResults() {
-        return results;
+    public List<Review> getmResults() {
+        return mResults;
     }
 
-    public void setResults(List<Review> results) {
-        this.results = results;
+    public void setmResults(List<Review> mResults) {
+        this.mResults = mResults;
     }
 
     public Integer getTotalPages() {
